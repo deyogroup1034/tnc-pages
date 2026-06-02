@@ -39,6 +39,13 @@
   .soon-wrap .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
   .soon-list{display:flex;flex-wrap:wrap;gap:10px}
   .soon{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--muted)}
+  .detail-wrap{margin-top:46px;padding-top:34px;border-top:1px solid var(--line)}
+  .dg{margin-bottom:26px}
+  .dg:last-child{margin-bottom:0}
+  .dg-h{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+  .dg-list{display:flex;flex-wrap:wrap;gap:10px}
+  .dg-link{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy);transition:border-color .15s,color .15s,transform .15s}
+  .dg-link:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
   .changelog{margin-top:46px;padding:30px 30px 34px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:14px;box-shadow:0 10px 26px rgba(13,31,60,.05)}
   .changelog .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
   .changelog h2{font-size:24px;margin-bottom:20px}
@@ -120,10 +127,39 @@
         <span class="card-go">View page &rarr;</span>
       </a>
     </div>
+    <div class="detail-wrap">
+      <div class="dg">
+        <div class="dg-h">Product detail pages &middot; 9</div>
+        <div class="dg-list">
+          <a class="dg-link" href="tnc-product-aluminum.html">Aluminum Nameplates</a>
+          <a class="dg-link" href="tnc-product-stainless.html">Stainless Steel Nameplates</a>
+          <a class="dg-link" href="tnc-product-brass.html">Brass Nameplates</a>
+          <a class="dg-link" href="tnc-product-control-panels.html">Control Panels</a>
+          <a class="dg-link" href="tnc-product-metalphoto.html">Metal Photo®</a>
+          <a class="dg-link" href="tnc-product-labels-decals.html">Labels / Decals</a>
+          <a class="dg-link" href="tnc-product-signage.html">Signage</a>
+          <a class="dg-link" href="tnc-product-phenolic.html">Phenolic / Plastic Tags</a>
+          <a class="dg-link" href="tnc-product-serialized-tags.html">Blank / Serialized Tags</a>
+        </div>
+      </div>
+      <div class="dg">
+        <div class="dg-h">Process detail pages &middot; 7</div>
+        <div class="dg-list">
+          <a class="dg-link" href="tnc-process-etching.html">Chemical Etching</a>
+          <a class="dg-link" href="tnc-process-screen-printing.html">Screen Printing</a>
+          <a class="dg-link" href="tnc-process-laser-marking.html">Laser Engraving / Marking</a>
+          <a class="dg-link" href="tnc-process-laser-cutting.html">Laser Cutting</a>
+          <a class="dg-link" href="tnc-process-digital-printing.html">Digital Printing</a>
+          <a class="dg-link" href="tnc-process-punching-forming.html">Punching / Forming</a>
+          <a class="dg-link" href="tnc-process-finishing.html">Finishing / Tape Converter</a>
+        </div>
+      </div>
+    </div>
     <div class="changelog">
       <div class="lbl">What's Changed</div>
       <h2>Update log <span class="cl-date">&mdash; June 1, 2026</span></h2>
       <ul class="cl-list">
+        <li class="cl-item"><span class="cl-pill new">New pages</span><p><strong>16 product &amp; process detail pages.</strong> Every product (9) and process (7) now has its own page, reachable from the Products and Processes overviews and listed under &ldquo;Detail pages&rdquo; on this preview. Each product page covers overview, finishes &amp; options, how it&rsquo;s made, typical applications, an at-a-glance spec card, and related products; each process page covers how it works, materials, capabilities, and the products it&rsquo;s used for. Products and processes are cross-linked both ways. All specs, capabilities, tolerances, and photography are best-faith drafts flagged in-page for TNC to confirm.</p></li>
         <li class="cl-item"><span class="cl-pill new">New pages</span><p><strong>Environmental &amp; Green™, News &amp; Updates, and Pay Online.</strong> Three secondary pages added and linked from the top utility bar and footer site-wide. Environmental covers sustainability practices and the Green™ program; News is a newsroom layout with sample articles; Pay Online has a pay-an-invoice flow. Content on all three is draft/sample, and the payment checkout and processor are flagged for TNC to confirm.</p></li>
         <li class="cl-item"><span class="cl-pill new">New page</span><p><strong>FAQ.</strong> 30 questions across seven categories &mdash; materials &amp; capabilities, processes, specs &amp; standards, artwork &amp; files, orders &amp; lead times, quality &amp; certifications, and sustainability &mdash; with a live search box. Three answers are flagged in-page for TNC to confirm: maximum single-piece part dimensions, standard lead-time range, and current ISO certification status &amp; certificate numbers.</p></li>
         <li class="cl-item"><span class="cl-pill">Industries</span><p><strong>Expanded to the full sector list.</strong> Added Pumps &amp; Vessels, Elevators &amp; Escalators, Mining, Safety, and Test &amp; Measurement, each with its own icon.</p></li>
@@ -134,7 +170,7 @@
     </div>
     <div class="soon-wrap">
       <div class="lbl">In progress / coming next</div>
-      <div class="soon-list"><span class="soon">Homepage</span><span class="soon">Product &amp; Process detail pages</span></div>
+      <div class="soon-list"><span class="soon">Homepage</span></div>
     </div>
   </div></section>
   <footer>
