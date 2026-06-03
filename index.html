@@ -39,24 +39,16 @@
   .soon-wrap .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
   .soon-list{display:flex;flex-wrap:wrap;gap:10px}
   .soon{background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--muted)}
-  .detail-wrap{margin-top:46px;padding-top:34px;border-top:1px solid var(--line)}
-  .dg{margin-bottom:26px}
-  .dg:last-child{margin-bottom:0}
-  .dg-h{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
-  .dg-list{display:flex;flex-wrap:wrap;gap:10px}
-  .dg-link{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy);transition:border-color .15s,color .15s,transform .15s}
-  .dg-link:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
-  .changelog{margin-top:46px;padding:30px 30px 34px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:14px;box-shadow:0 10px 26px rgba(13,31,60,.05)}
-  .changelog .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
-  .changelog h2{font-size:24px;margin-bottom:20px}
-  .changelog h2 .cl-date{font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:600;font-size:15px}
-  .cl-list{list-style:none;display:flex;flex-direction:column;gap:15px}
-  .cl-item{display:flex;gap:14px;align-items:flex-start}
-  .cl-pill{flex:none;background:var(--navy);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:6px 0;border-radius:30px;margin-top:3px;width:104px;text-align:center}
-  .cl-pill.new{background:var(--red)}
-  .cl-item p{color:var(--ink);font-size:15px;line-height:1.55}
-  .cl-item p strong{color:var(--navy);font-weight:700}
-  @media(max-width:680px){.cl-item{flex-direction:column;gap:6px}.cl-pill{width:auto;padding:6px 14px;align-self:flex-start}}
+  .changes{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 30px 24px;box-shadow:0 10px 26px rgba(13,31,60,.05);margin-top:46px}
+  .changes .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+  .changes h2{font-size:24px;margin-bottom:20px}
+  .change-entry{padding:18px 0;border-top:1px solid var(--line)}
+  .change-entry:first-of-type{border-top:0;padding-top:0}
+  .change-date{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .change-entry ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .change-entry li{position:relative;padding-left:24px;font-size:14.5px;color:var(--ink);line-height:1.5}
+  .change-entry li::before{content:"";position:absolute;left:4px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--red)}
+  .change-entry li b{color:var(--navy);font-weight:700}
   footer{background:#0a182f;color:#9fb0c6;text-align:center;padding:36px 28px}
   footer img{height:46px;margin-bottom:12px}
   footer p{font-size:12.5px;color:#7e8ea6}
@@ -108,69 +100,35 @@
         <p>30 questions across 7 categories — materials, processes, certifications, the Green™ program, and more.</p>
         <span class="card-go">View page &rarr;</span>
       </a>
-      <a class="card" href="tnc-environmental.html">
-        <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M12 2.7C7 8 5 11 5 14a7 7 0 0 0 14 0c0-3-2-6-7-11.3z"/></svg></div>
-        <h3>Environmental &amp; Green™</h3>
-        <p>Sustainability commitments, the Green™ program, and compliance — RoHS, REACH, ISO 14001.</p>
-        <span class="card-go">View page &rarr;</span>
-      </a>
-      <a class="card" href="tnc-news.html">
-        <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
-        <h3>News &amp; Updates</h3>
-        <p>Newsroom layout with a featured story, an article grid, and a newsletter sign-up. Sample content.</p>
-        <span class="card-go">View page &rarr;</span>
-      </a>
-      <a class="card" href="tnc-pay.html">
-        <div class="card-ic"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-        <h3>Pay Online</h3>
-        <p>Pay-an-invoice flow, accepted payment methods, and other ways to pay. Checkout not yet connected.</p>
-        <span class="card-go">View page &rarr;</span>
-      </a>
-    </div>
-    <div class="detail-wrap">
-      <div class="dg">
-        <div class="dg-h">Product detail pages &middot; 9</div>
-        <div class="dg-list">
-          <a class="dg-link" href="tnc-product-aluminum.html">Aluminum Nameplates</a>
-          <a class="dg-link" href="tnc-product-stainless.html">Stainless Steel Nameplates</a>
-          <a class="dg-link" href="tnc-product-brass.html">Brass Nameplates</a>
-          <a class="dg-link" href="tnc-product-control-panels.html">Control Panels</a>
-          <a class="dg-link" href="tnc-product-metalphoto.html">Metal Photo®</a>
-          <a class="dg-link" href="tnc-product-labels-decals.html">Labels / Decals</a>
-          <a class="dg-link" href="tnc-product-signage.html">Signage</a>
-          <a class="dg-link" href="tnc-product-phenolic.html">Phenolic / Plastic Tags</a>
-          <a class="dg-link" href="tnc-product-serialized-tags.html">Blank / Serialized Tags</a>
-        </div>
-      </div>
-      <div class="dg">
-        <div class="dg-h">Process detail pages &middot; 7</div>
-        <div class="dg-list">
-          <a class="dg-link" href="tnc-process-etching.html">Chemical Etching</a>
-          <a class="dg-link" href="tnc-process-screen-printing.html">Screen Printing</a>
-          <a class="dg-link" href="tnc-process-laser-marking.html">Laser Engraving / Marking</a>
-          <a class="dg-link" href="tnc-process-laser-cutting.html">Laser Cutting</a>
-          <a class="dg-link" href="tnc-process-digital-printing.html">Digital Printing</a>
-          <a class="dg-link" href="tnc-process-punching-forming.html">Punching / Forming</a>
-          <a class="dg-link" href="tnc-process-finishing.html">Finishing / Tape Converter</a>
-        </div>
-      </div>
-    </div>
-    <div class="changelog">
-      <div class="lbl">What's Changed</div>
-      <h2>Update log <span class="cl-date">&mdash; June 1, 2026</span></h2>
-      <ul class="cl-list">
-        <li class="cl-item"><span class="cl-pill new">New pages</span><p><strong>16 product &amp; process detail pages.</strong> Every product (9) and process (7) now has its own page, reachable from the Products and Processes overviews and listed under &ldquo;Detail pages&rdquo; on this preview. Each product page covers overview, finishes &amp; options, how it&rsquo;s made, typical applications, an at-a-glance spec card, and related products; each process page covers how it works, materials, capabilities, and the products it&rsquo;s used for. Products and processes are cross-linked both ways. All specs, capabilities, tolerances, and photography are best-faith drafts flagged in-page for TNC to confirm.</p></li>
-        <li class="cl-item"><span class="cl-pill new">New pages</span><p><strong>Environmental &amp; Green™, News &amp; Updates, and Pay Online.</strong> Three secondary pages added and linked from the top utility bar and footer site-wide. Environmental covers sustainability practices and the Green™ program; News is a newsroom layout with sample articles; Pay Online has a pay-an-invoice flow. Content on all three is draft/sample, and the payment checkout and processor are flagged for TNC to confirm.</p></li>
-        <li class="cl-item"><span class="cl-pill new">New page</span><p><strong>FAQ.</strong> 30 questions across seven categories &mdash; materials &amp; capabilities, processes, specs &amp; standards, artwork &amp; files, orders &amp; lead times, quality &amp; certifications, and sustainability &mdash; with a live search box. Three answers are flagged in-page for TNC to confirm: maximum single-piece part dimensions, standard lead-time range, and current ISO certification status &amp; certificate numbers.</p></li>
-        <li class="cl-item"><span class="cl-pill">Industries</span><p><strong>Expanded to the full sector list.</strong> Added Pumps &amp; Vessels, Elevators &amp; Escalators, Mining, Safety, and Test &amp; Measurement, each with its own icon.</p></li>
-        <li class="cl-item"><span class="cl-pill">Contact</span><p><strong>Hours &amp; form note updated.</strong> Business hours now read Monday&ndash;Friday, 8:00 AM&ndash;4:30 PM CT, plus a note that the quote request form is protected against spam.</p></li>
-        <li class="cl-item"><span class="cl-pill">Site-wide</span><p><strong>Navigation &amp; footers.</strong> FAQ added to the top navigation on every page; footer links standardized to &ldquo;Labels / Decals&rdquo; and &ldquo;Finishing / Tape Converter.&rdquo;</p></li>
-        <li class="cl-item"><span class="cl-pill">This page</span><p><strong>Preview menu tidy-up.</strong> FAQ added as a card and removed from the &ldquo;coming next&rdquo; list now that the page is built.</p></li>
-      </ul>
     </div>
     <div class="soon-wrap">
       <div class="lbl">In progress / coming next</div>
-      <div class="soon-list"><span class="soon">Homepage</span></div>
+      <div class="soon-list"><span class="soon">Homepage</span><span class="soon">Environmental &amp; Green&trade;</span><span class="soon">News &amp; Updates</span><span class="soon">Pay Online</span><span class="soon">Product &amp; Process detail pages</span></div>
+    </div>
+
+    <div class="changes">
+      <div class="lbl">Change notes</div>
+      <h2>What&rsquo;s new in this preview</h2>
+
+      <div class="change-entry">
+        <div class="change-date">June 3, 2026</div>
+        <ul>
+          <li><b>FAQ updated from Mina&rsquo;s review</b> &mdash; revised the metals list, non-metal materials, color matching, etch-depth specs, MIL-spec standards, and the maximum-size answer.</li>
+          <li><b>ISO certificates now viewable</b> &mdash; the FAQ links to the live ISO 9001:2015 and ISO 14001:2015 certificates, which open in a popup viewer (real DQS/ANAB cert numbers in place).</li>
+          <li><b>UL listing detail expanded</b> &mdash; added the UL969 standard and category codes to the UL Authorized Label Supplier answer.</li>
+          <li><b>Two industries added</b> &mdash; Construction and Plumbing now appear on the Industries page, filling out the grid to 15 sectors.</li>
+        </ul>
+      </div>
+
+      <div class="change-entry">
+        <div class="change-date">Earlier</div>
+        <ul>
+          <li><b>Homepage built and deployed</b> &mdash; a standalone homepage is live on a staging URL, with SEO, schema, and a responsive mobile layout.</li>
+          <li><b>Inner pages assembled</b> &mdash; About, Products, Processes, Industries, Contact, and FAQ are in place for review (linked above).</li>
+        </ul>
+      </div>
+
+      <p style="font-size:13px;color:var(--muted);margin-top:6px">A few items remain open pending your input &mdash; maximum single-piece dimensions and standard lead time are flagged on the FAQ for confirmation.</p>
     </div>
   </div></section>
   <footer>

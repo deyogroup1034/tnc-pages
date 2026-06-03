@@ -15,6 +15,25 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
+
+  /* Certificate links + modal */
+  .cert-link{color:var(--red);font-weight:700;white-space:nowrap;border-bottom:1px solid transparent;transition:border-color .15s}
+  .cert-link:hover{border-bottom-color:var(--red)}
+  .cert-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px}
+  .cert-modal.open{display:flex}
+  .cert-modal-backdrop{position:absolute;inset:0;background:rgba(13,31,60,.6);backdrop-filter:blur(2px)}
+  .cert-modal-box{position:relative;background:#fff;border-radius:8px;width:min(860px,100%);height:min(90vh,1000px);display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.35);overflow:hidden}
+  .cert-modal-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--navy)}
+  .cert-modal-title{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#fff;font-size:18px}
+  .cert-modal-actions{display:flex;align-items:center;gap:14px}
+  .cert-modal-open{color:#fff;font-size:13px;font-weight:600;opacity:.85}
+  .cert-modal-open:hover{opacity:1;text-decoration:underline}
+  .cert-modal-x{background:none;border:0;color:#fff;font-size:30px;line-height:1;cursor:pointer;opacity:.8;padding:0 4px}
+  .cert-modal-x:hover{opacity:1}
+  .cert-modal-body{flex:1;background:var(--surface)}
+  .cert-modal-body iframe{width:100%;height:100%;border:0;display:block}
+  @media(max-width:600px){.cert-modal{padding:0}.cert-modal-box{height:100vh;width:100%;border-radius:0}}
+
   body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
   h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);line-height:1.12;font-weight:700}
   a{color:inherit;text-decoration:none}
@@ -236,7 +255,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Our core metals are aluminum (anodized and plain), stainless steel (304 and 316), and brass. We also work with copper, nickel-silver, and a range of military-grade alloys on request. If your application calls for a specific alloy, send us the spec and we'll confirm.</p></div>
+          <div class="qa-a-in"><p>Our core metals are aluminum (anodized and plain), stainless steel (304 and 316), and brass. We also work with a range of military-grade alloys on request. If your application calls for a specific alloy, send us the spec and we'll confirm.</p></div>
         </div>
       </div>
       <div class="qa">
@@ -245,7 +264,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Yes. In addition to metals, we manufacture phenolic and plastic tags for applications where weight, cost, or non-conductive properties are priorities. Phenolic is particularly common for electrical legend plates and equipment ID.</p></div>
+          <div class="qa-a-in"><p>Yes. In addition to metals, we manufacture phenolic and plastic tags for applications where weight, cost, or non-conductive properties are priorities. Phenolic is particularly common for electrical legend plates and equipment ID. We also work with vinyl, polycarbonates, Lexan, polyesters, and other flexible materials.</p></div>
         </div>
       </div>
       <div class="qa">
@@ -254,7 +273,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>We routinely produce parts up to 24" × 36" in a single piece. For larger applications, we can manufacture multi-panel assemblies designed to join seamlessly. <span class="ph-tag">TNC to confirm max dimensions</span></p></div>
+          <div class="qa-a-in"><p>We can produce multiple panels within our maximum sheet size, but we do not assemble multi-panel units. For the largest single-piece dimensions we can run, send us your specification and we'll confirm. <span class="ph-tag">TNC to confirm max dimensions</span></p></div>
         </div>
       </div>
       <div class="qa">
@@ -326,7 +345,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Standard etch depths range from 0.002" to 0.010". For special applications requiring deeper recesses — for example, paint-filled tactile markings — we can etch up to 0.020" or more, depending on substrate. <span class="ph-tag">TNC to verify spec ranges</span></p></div>
+          <div class="qa-a-in"><p>Standard etch depths range from 0.0015" to 0.004". For special applications requiring deeper recesses, we can laser etch deeper depending on the substrate. Send us your specification and we'll confirm.</p></div>
         </div>
       </div>
       <div class="qa">
@@ -335,7 +354,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Yes. We can match Pantone, RAL, federal standard, and custom color specifications. For multi-color jobs, we screen print using calibrated ink and verify match with a spectrophotometer before production.</p></div>
+          <div class="qa-a-in"><p>Yes. We can match Pantone, RAL, federal standard, and custom color specifications. For multi-color jobs, we color-match using calibrated ink and verify the match with a spectrophotometer before production.</p></div>
         </div>
       </div>
       <div class="qa">
@@ -344,7 +363,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Yes. We routinely produce nameplates and data plates that meet MIL-DTL-15024, MIL-STD-130, and other military specifications. We're ITAR-registered and equipped to handle controlled work.</p></div>
+          <div class="qa-a-in"><p>Yes. We routinely produce nameplates and data plates that meet MIL-DTL-15024, MIL-STD-130, GG-P-455, MIL-P-19834, and other military specifications. We're ITAR-registered and equipped to handle controlled work.</p></div>
         </div>
       </div>
       <div class="qa">
@@ -470,7 +489,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Yes. We maintain ISO certification for our quality management system. <span class="ph-tag">TNC to confirm current ISO 9001 / 14001 status &amp; cert numbers</span></p></div>
+          <div class="qa-a-in"><p>Yes. Texas Nameplate Company maintains both <strong>ISO 9001:2015</strong> (quality management, cert. no. 10001847 QM15) and <strong>ISO 14001:2015</strong> (environmental management, cert. no. 10001847 UM15), certified by DQS Inc. and accredited by ANAB. View our current certificates: <a href="#" class="cert-link" data-cert="iso9001">ISO 9001:2015 &rarr;</a> &nbsp;|&nbsp; <a href="#" class="cert-link" data-cert="iso14001">ISO 14001:2015 &rarr;</a></p></div>
         </div>
       </div>
       <div class="qa">
@@ -479,7 +498,7 @@
           <svg class="qa-chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="qa-a">
-          <div class="qa-a-in"><p>Yes. Texas Nameplate Company is a UL Solutions Authorized Label Supplier under file LP1057, qualified to manufacture UL-recognized labels and rating plates.</p></div>
+          <div class="qa-a-in"><p>Yes. Texas Nameplate Company is a UL Solutions Authorized Label Supplier under file LP1057, qualified to manufacture UL-recognized labels under the UL969 standard, categories PGDQ2 and PGDQ8, as well as rating plates.</p></div>
         </div>
       </div>
       <div class="qa">
@@ -599,6 +618,23 @@
   </div>
 </footer>
 
+<!-- Certificate viewer modal -->
+<div class="cert-modal" id="certModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+  <div class="cert-modal-backdrop" data-close></div>
+  <div class="cert-modal-box">
+    <div class="cert-modal-head">
+      <span class="cert-modal-title" id="certModalTitle">Certificate</span>
+      <div class="cert-modal-actions">
+        <a class="cert-modal-open" id="certModalOpen" href="#" target="_blank" rel="noopener">Open in new tab &nearr;</a>
+        <button class="cert-modal-x" data-close aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="cert-modal-body">
+      <iframe id="certModalFrame" title="Certificate PDF" src=""></iframe>
+    </div>
+  </div>
+</div>
+
 <script>
   // sticky nav shadow
   const mainnav = document.getElementById('mainnav');
@@ -699,6 +735,40 @@
     const target = document.querySelector(window.location.hash);
     if (target) target.scrollIntoView({ block:'start' });
   }
+
+  // Certificate modal
+  (function(){
+    var certs = {
+      iso9001:  { title: 'ISO 9001:2015 Certificate',  file: 'assets/TNC-ISO-9001-2015.pdf' },
+      iso14001: { title: 'ISO 14001:2015 Certificate', file: 'assets/TNC-ISO-14001-2015.pdf' }
+    };
+    var modal = document.getElementById('certModal');
+    var frame = document.getElementById('certModalFrame');
+    var titleEl = document.getElementById('certModalTitle');
+    var openEl = document.getElementById('certModalOpen');
+    function openCert(key){
+      var c = certs[key]; if(!c) return;
+      titleEl.textContent = c.title;
+      frame.src = c.file;
+      openEl.href = c.file;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCert(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      frame.src = '';
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.cert-link').forEach(function(a){
+      a.addEventListener('click', function(e){ e.preventDefault(); openCert(a.getAttribute('data-cert')); });
+    });
+    modal.querySelectorAll('[data-close]').forEach(function(el){
+      el.addEventListener('click', closeCert);
+    });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('open')) closeCert(); });
+  })();
 </script>
 </body>
 </html>
