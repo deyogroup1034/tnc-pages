@@ -166,7 +166,7 @@
 <div class="pending">
   <div class="pending-in">
     <svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-    <p><b>Prototype &mdash; payment not yet connected.</b> The checkout button is a placeholder. TNC to confirm the payment processor and provide the secure portal link before this page goes live. <span class="ph-tag">TNC to confirm payment provider</span></p>
+    <p><b>Prototype &mdash; payment not yet connected.</b> The checkout button is a placeholder. Final integration will run through Authorize.net, and some of the form styling will follow what their portal allows. <span class="ph-tag">Authorize.net integration to confirm</span></p>
   </div>
 </div>
 
@@ -187,15 +187,16 @@
           </div>
         </div>
         <div class="field">
-          <label>Company / Account Name</label>
-          <input type="text" id="p_co" placeholder="Your company name">
+          <label>TNC Authorization Code <span class="req">*</span></label>
+          <input type="text" id="p_auth" placeholder="From your invoice">
+          <div class="sub" style="margin-top:6px">This code is printed on your TNC invoice and is used to verify the payment. <span class="ph-tag">TNC to confirm code format &amp; verification</span></div>
         </div>
         <div class="pay-submit">
           <button class="btn btn-red" id="payBtn" style="width:100%">Continue to Secure Checkout &rarr;</button>
         </div>
         <div class="secure">
           <svg viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          Payments are processed through a secure, encrypted checkout. <span class="ph-tag">confirm provider</span>
+          Payments will be processed through Authorize.net&rsquo;s secure, encrypted checkout.
         </div>
       </div>
       <div class="paid" id="paid">
@@ -214,7 +215,7 @@
           </div>
           <div class="mrow">
             <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M12 3 3 8h18z"/></svg>
-            <div><div class="t">ACH / Bank Transfer</div><div class="d">Pay directly from a business checking account. <span class="ph-tag">confirm availability</span></div></div>
+            <div><div class="t">ACH / Bank Transfer</div><div class="d">Available for business accounts &mdash; call our accounting department at <a href="tel:2144288341" style="color:var(--red);font-weight:700">214-428-8341</a> to set it up.</div></div>
           </div>
           <div class="mrow">
             <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20M6 14h6"/></svg>
@@ -266,7 +267,8 @@
   document.getElementById('payBtn').addEventListener('click', () => {
     const inv=document.getElementById('p_inv').value.trim();
     const amt=document.getElementById('p_amt').value.trim();
-    if(!inv||!amt){ alert('Please enter your invoice number and amount due.'); return; }
+    const auth=document.getElementById('p_auth').value.trim();
+    if(!inv||!amt||!auth){ alert('Please enter your invoice number, amount due, and TNC authorization code.'); return; }
     document.getElementById('payInner').style.display='none';
     document.getElementById('paid').classList.add('show');
     window.scrollTo({top:document.querySelector('.pgrid2').offsetTop-90,behavior:'smooth'});
