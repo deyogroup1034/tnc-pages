@@ -188,8 +188,8 @@
         </div>
         <div class="field">
           <label>TNC Authorization Code <span class="req">*</span></label>
-          <input type="text" id="p_auth" placeholder="From your invoice">
-          <div class="sub" style="margin-top:6px">This code is printed on your TNC invoice and is used to verify the payment. <span class="ph-tag">TNC to confirm code format &amp; verification</span></div>
+          <input type="text" id="p_auth" inputmode="numeric" maxlength="10" placeholder="10-digit code from your invoice">
+          <div class="sub" style="margin-top:6px">This 10-digit number is printed on your TNC invoice and is used to verify the payment.</div>
         </div>
         <div class="pay-submit">
           <button class="btn btn-red" id="payBtn" style="width:100%">Continue to Secure Checkout &rarr;</button>
@@ -269,6 +269,7 @@
     const amt=document.getElementById('p_amt').value.trim();
     const auth=document.getElementById('p_auth').value.trim();
     if(!inv||!amt||!auth){ alert('Please enter your invoice number, amount due, and TNC authorization code.'); return; }
+    if(!/^\d{10}$/.test(auth)){ alert('The TNC authorization code is the 10-digit number printed on your invoice.'); return; }
     document.getElementById('payInner').style.display='none';
     document.getElementById('paid').classList.add('show');
     window.scrollTo({top:document.querySelector('.pgrid2').offsetTop-90,behavior:'smooth'});
