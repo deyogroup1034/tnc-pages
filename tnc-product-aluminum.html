@@ -106,9 +106,6 @@
   .pd-main h2{font-size:26px;margin:0 0 14px}
   .pd-main p{color:var(--muted);font-size:16px;margin-bottom:16px}
   .subhead{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:30px 0 12px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px}
-  .chip{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  a.chip:hover{border-color:var(--red);color:var(--red)}
   .specbox{background:var(--navy);color:#fff;border-radius:14px;padding:30px 28px;position:sticky;top:104px}
   .specbox h3{color:#fff;font-size:19px;margin-bottom:8px}
   .specbox .pc{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#cdd6e3;font-size:11px;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:4px;margin-bottom:16px}
@@ -131,10 +128,10 @@
   .rcard:hover .go{text-decoration:underline}
   @media(max-width:860px){.pd-top{grid-template-columns:1fr}.specbox{position:static}.gallery{grid-template-columns:1fr 1fr}.related{grid-template-columns:1fr}}
   /* collapsible detail sections (FAQ-style) */
-  .acc{margin-top:30px;border-top:1px solid var(--line)}
+  .acc{border-top:1px solid var(--line)}
   .qa{border-bottom:1px solid var(--line)}
   .qa-q{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:none;border:0;padding:16px 0;cursor:pointer;font-family:inherit}
-  .qa-q-text{flex:1;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);transition:color .15s}
+  .qa-q-text{flex:1;font-size:17px;font-weight:700;line-height:1.4;color:var(--navy);transition:color .15s}
   .qa-chev{flex-shrink:0;color:var(--muted);transition:transform .25s,color .15s}
   .qa-q:hover .qa-q-text,.qa-q:hover .qa-chev{color:var(--red)}
   .qa.open .qa-q-text{color:var(--red)}
@@ -182,32 +179,42 @@
         <h2>Overview</h2>
         <p>Aluminum is the most widely specified material we run, and for good reason: it pairs excellent durability with a clean, professional finish at a sensible cost. We offer it in both mill and anodized finishes &mdash; the anodized layer protects the printed or etched image so it resists corrosion, abrasion, and UV exposure in both indoor and outdoor service.</p>
       <p>We produce aluminum nameplates by chemical etching, screen printing, and digital printing — alone or in combination — which lets us match the right method to your durability, color, and volume requirements.</p>
+        <div class="subhead">Typical Applications</div>
         <div class="acc">
           <div class="qa open">
             <button class="qa-q" aria-expanded="true">
-              <span class="qa-q-text">Finishes &amp; Options</span>
+              <span class="qa-q-text">Equipment &amp; rating plates</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><span class="chip">Mill finish</span><span class="chip">Clear anodized</span><span class="chip">Black anodized</span><span class="chip">Color anodize</span><span class="chip">Brushed</span><span class="chip">Matte / satin</span></div>
+              <p>The workhorse spec for motors, pumps, transformers, and OEM machinery. Anodized aluminum carries ratings, wiring data, and compliance marks legibly for the life of the equipment, and takes fine text and logos cleanly at any run size.</p>
             </div></div>
           </div>
           <div class="qa">
             <button class="qa-q" aria-expanded="false">
-              <span class="qa-q-text">How It&rsquo;s Made</span>
+              <span class="qa-q-text">Asset &amp; ID tags</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><a class="chip" href="tnc-process-etching.html">Chemical Etching &rarr;</a><a class="chip" href="tnc-process-screen-printing.html">Screen Printing &rarr;</a><a class="chip" href="tnc-process-digital-printing.html">Digital Printing &rarr;</a><a class="chip" href="tnc-process-laser-marking.html">Laser Engraving / Marking &rarr;</a><a class="chip" href="tnc-process-finishing.html">Finishing / Tape Converter &rarr;</a></div>
+              <p>Lightweight, economical, and easy to serialize by etch, print, or laser, aluminum is the default choice for tagging equipment across a facility. Pre-drilled holes or adhesive backing make installation quick on almost any surface.</p>
             </div></div>
           </div>
           <div class="qa">
             <button class="qa-q" aria-expanded="false">
-              <span class="qa-q-text">Typical Applications</span>
+              <span class="qa-q-text">Outdoor / UV service</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><span class="chip">Equipment &amp; rating plates</span><span class="chip">Asset &amp; ID tags</span><span class="chip">Outdoor / UV service</span><span class="chip">Industrial controls</span></div>
+              <p>The sealed anodized layer locks the image beneath the surface, so plates shrug off sun, rain, and temperature swings without fading or peeling. It&rsquo;s why aluminum is our first recommendation for anything mounted outside.</p>
+            </div></div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false">
+              <span class="qa-q-text">Industrial controls</span>
+              <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="qa-a"><div class="qa-a-in">
+              <p>Panel identification, switch labeling, and instruction plates that stay readable through oil, solvents, and daily handling. Etched or printed aluminum keeps critical operating information exactly where operators need it.</p>
             </div></div>
           </div>
         </div>

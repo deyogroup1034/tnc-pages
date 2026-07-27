@@ -106,9 +106,6 @@
   .pd-main h2{font-size:26px;margin:0 0 14px}
   .pd-main p{color:var(--muted);font-size:16px;margin-bottom:16px}
   .subhead{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:30px 0 12px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px}
-  .chip{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  a.chip:hover{border-color:var(--red);color:var(--red)}
   .specbox{background:var(--navy);color:#fff;border-radius:14px;padding:30px 28px;position:sticky;top:104px}
   .specbox h3{color:#fff;font-size:19px;margin-bottom:8px}
   .specbox .pc{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#cdd6e3;font-size:11px;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:4px;margin-bottom:16px}
@@ -131,10 +128,10 @@
   .rcard:hover .go{text-decoration:underline}
   @media(max-width:860px){.pd-top{grid-template-columns:1fr}.specbox{position:static}.gallery{grid-template-columns:1fr 1fr}.related{grid-template-columns:1fr}}
   /* collapsible detail sections (FAQ-style) */
-  .acc{margin-top:30px;border-top:1px solid var(--line)}
+  .acc{border-top:1px solid var(--line)}
   .qa{border-bottom:1px solid var(--line)}
   .qa-q{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:none;border:0;padding:16px 0;cursor:pointer;font-family:inherit}
-  .qa-q-text{flex:1;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);transition:color .15s}
+  .qa-q-text{flex:1;font-size:17px;font-weight:700;line-height:1.4;color:var(--navy);transition:color .15s}
   .qa-chev{flex-shrink:0;color:var(--muted);transition:transform .25s,color .15s}
   .qa-q:hover .qa-q-text,.qa-q:hover .qa-chev{color:var(--red)}
   .qa.open .qa-q-text{color:var(--red)}
@@ -182,32 +179,42 @@
         <h2>Overview</h2>
         <p>When a nameplate has to survive heat, chemicals, salt spray, or constant washdown, stainless steel is the answer. Etched-and-filled stainless keeps its legibility in conditions that would destroy a printed plate, which is why it’s a staple in energy, marine, and process industries.</p>
       <p>We typically work in 304 and 316 stainless and finish parts by chemical etching or laser marking, depending on contrast and permanence requirements.</p>
+        <div class="subhead">Typical Applications</div>
         <div class="acc">
           <div class="qa open">
             <button class="qa-q" aria-expanded="true">
-              <span class="qa-q-text">Finishes &amp; Options</span>
+              <span class="qa-q-text">Oil &amp; gas</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><span class="chip">Brushed</span><span class="chip">Matte</span><span class="chip">Etched &amp; filled (black)</span></div>
+              <p>Upstream and downstream environments punish identification &mdash; salt air, chemicals, heat, and abrasion. 304 and 316 stainless with etched-and-filled marking is the proven spec for wellheads, skids, and pipeline equipment that has to stay traceable for decades.</p>
             </div></div>
           </div>
           <div class="qa">
             <button class="qa-q" aria-expanded="false">
-              <span class="qa-q-text">How It&rsquo;s Made</span>
+              <span class="qa-q-text">Food &amp; pharma washdown</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><a class="chip" href="tnc-process-etching.html">Chemical Etching &rarr;</a><a class="chip" href="tnc-process-screen-printing.html">Screen Printing &rarr;</a><a class="chip" href="tnc-process-digital-printing.html">Digital Printing &rarr;</a><a class="chip" href="tnc-process-laser-marking.html">Laser Engraving / Marking &rarr;</a><a class="chip" href="tnc-process-finishing.html">Finishing / Tape Converter &rarr;</a></div>
+              <p>Stainless stands up to caustic cleaners, sanitizers, and high-pressure washdown cycles without corroding. Etched marking keeps line, lot, and equipment data permanent through thousands of cleanings.</p>
             </div></div>
           </div>
           <div class="qa">
             <button class="qa-q" aria-expanded="false">
-              <span class="qa-q-text">Typical Applications</span>
+              <span class="qa-q-text">Marine</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><span class="chip">Oil &amp; gas</span><span class="chip">Food &amp; pharma washdown</span><span class="chip">Marine</span><span class="chip">Defense data plates</span></div>
+              <p>Constant salt spray and moisture make marine identification a corrosion problem first. 316 stainless resists pitting where other metals fail, keeping vessel and dockside equipment plates readable season after season.</p>
+            </div></div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false">
+              <span class="qa-q-text">Defense data plates</span>
+              <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="qa-a"><div class="qa-a-in">
+              <p>Mil-spec programs call for identification that survives the service life of the asset. Etched stainless data plates meet the durability and permanence requirements defense contractors specify, with serialization and UID formats supported.</p>
             </div></div>
           </div>
         </div>

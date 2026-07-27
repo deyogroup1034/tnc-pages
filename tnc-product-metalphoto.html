@@ -106,9 +106,6 @@
   .pd-main h2{font-size:26px;margin:0 0 14px}
   .pd-main p{color:var(--muted);font-size:16px;margin-bottom:16px}
   .subhead{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:30px 0 12px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px}
-  .chip{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  a.chip:hover{border-color:var(--red);color:var(--red)}
   .specbox{background:var(--navy);color:#fff;border-radius:14px;padding:30px 28px;position:sticky;top:104px}
   .specbox h3{color:#fff;font-size:19px;margin-bottom:8px}
   .specbox .pc{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#cdd6e3;font-size:11px;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:4px;margin-bottom:16px}
@@ -131,10 +128,10 @@
   .rcard:hover .go{text-decoration:underline}
   @media(max-width:860px){.pd-top{grid-template-columns:1fr}.specbox{position:static}.gallery{grid-template-columns:1fr 1fr}.related{grid-template-columns:1fr}}
   /* collapsible detail sections (FAQ-style) */
-  .acc{margin-top:30px;border-top:1px solid var(--line)}
+  .acc{border-top:1px solid var(--line)}
   .qa{border-bottom:1px solid var(--line)}
   .qa-q{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:none;border:0;padding:16px 0;cursor:pointer;font-family:inherit}
-  .qa-q-text{flex:1;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);transition:color .15s}
+  .qa-q-text{flex:1;font-size:17px;font-weight:700;line-height:1.4;color:var(--navy);transition:color .15s}
   .qa-chev{flex-shrink:0;color:var(--muted);transition:transform .25s,color .15s}
   .qa-q:hover .qa-q-text,.qa-q:hover .qa-chev{color:var(--red)}
   .qa.open .qa-q-text{color:var(--red)}
@@ -182,23 +179,33 @@
         <h2>Overview</h2>
         <p>Metal Photo® is a photographic process that seals a high-resolution image <em>beneath</em> the anodized surface of aluminum. The result is a plate with photographic detail and grayscale capability that shrugs off abrasion, chemicals, and decades of UV.</p>
       <p>It’s the gold standard for barcode and asset plates, military data plates, schematics, and anything that needs fine detail to stay readable for the life of the equipment.</p>
+        <div class="subhead">Typical Applications</div>
         <div class="acc">
           <div class="qa open">
             <button class="qa-q" aria-expanded="true">
-              <span class="qa-q-text">How It&rsquo;s Made</span>
+              <span class="qa-q-text">Barcode &amp; asset plates</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><a class="chip" href="tnc-processes.html">Metal Photo® Imaging &rarr;</a></div>
+              <p>Metalphoto&rsquo;s photographic process embeds barcodes and serial data beneath a sapphire-hard anodic layer, producing scannable plates rated for 20+ years outdoors. The go-to spec when a barcode absolutely cannot fail.</p>
             </div></div>
           </div>
           <div class="qa">
             <button class="qa-q" aria-expanded="false">
-              <span class="qa-q-text">Typical Applications</span>
+              <span class="qa-q-text">Military data plates</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><span class="chip">Barcode &amp; asset plates</span><span class="chip">Military data plates</span><span class="chip">Schematics &amp; diagrams</span></div>
+              <p>Metalphoto is named in numerous military specifications for UID and equipment data plates because the image is sealed inside the anodized aluminum itself. It withstands abrasion, chemicals, salt spray, and temperature extremes that destroy printed plates.</p>
+            </div></div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false">
+              <span class="qa-q-text">Schematics &amp; diagrams</span>
+              <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="qa-a"><div class="qa-a-in">
+              <p>Photographic resolution reproduces fine-line schematics, wiring diagrams, and dense instructional text with perfect fidelity at plate scale. Ideal for lubrication charts and operating diagrams mounted right on the equipment.</p>
             </div></div>
           </div>
         </div>

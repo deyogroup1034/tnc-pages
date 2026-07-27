@@ -106,9 +106,6 @@
   .pd-main h2{font-size:26px;margin:0 0 14px}
   .pd-main p{color:var(--muted);font-size:16px;margin-bottom:16px}
   .subhead{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:30px 0 12px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px}
-  .chip{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  a.chip:hover{border-color:var(--red);color:var(--red)}
   .specbox{background:var(--navy);color:#fff;border-radius:14px;padding:30px 28px;position:sticky;top:104px}
   .specbox h3{color:#fff;font-size:19px;margin-bottom:8px}
   .specbox .pc{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#cdd6e3;font-size:11px;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:4px;margin-bottom:16px}
@@ -131,10 +128,10 @@
   .rcard:hover .go{text-decoration:underline}
   @media(max-width:860px){.pd-top{grid-template-columns:1fr}.specbox{position:static}.gallery{grid-template-columns:1fr 1fr}.related{grid-template-columns:1fr}}
   /* collapsible detail sections (FAQ-style) */
-  .acc{margin-top:30px;border-top:1px solid var(--line)}
+  .acc{border-top:1px solid var(--line)}
   .qa{border-bottom:1px solid var(--line)}
   .qa-q{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:none;border:0;padding:16px 0;cursor:pointer;font-family:inherit}
-  .qa-q-text{flex:1;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);transition:color .15s}
+  .qa-q-text{flex:1;font-size:17px;font-weight:700;line-height:1.4;color:var(--navy);transition:color .15s}
   .qa-chev{flex-shrink:0;color:var(--muted);transition:transform .25s,color .15s}
   .qa-q:hover .qa-q-text,.qa-q:hover .qa-chev{color:var(--red)}
   .qa.open .qa-q-text{color:var(--red)}
@@ -182,23 +179,33 @@
         <h2>Overview</h2>
         <p>Whether you need blank stock to mark yourself or finished tags numbered and ready to apply, we produce identification tags at any volume. Sequential numbers, barcodes, and QR codes support asset tracking, inventory, and calibration programs.</p>
       <p>Tags can be punched, laser marked, or etched in aluminum, stainless, and other materials, with holes, slots, or adhesive to suit how they’re attached.</p>
+        <div class="subhead">Typical Applications</div>
         <div class="acc">
           <div class="qa open">
             <button class="qa-q" aria-expanded="true">
-              <span class="qa-q-text">How It&rsquo;s Made</span>
+              <span class="qa-q-text">Asset tracking</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><a class="chip" href="tnc-process-etching.html">Chemical Etching &rarr;</a><a class="chip" href="tnc-process-screen-printing.html">Screen Printing &rarr;</a><a class="chip" href="tnc-process-digital-printing.html">Digital Printing &rarr;</a><a class="chip" href="tnc-process-laser-marking.html">Laser Engraving / Marking &rarr;</a><a class="chip" href="tnc-process-finishing.html">Finishing / Tape Converter &rarr;</a></div>
+              <p>Sequentially numbered or barcoded tags that tie every piece of equipment to your maintenance and accounting systems. Etched or laser-marked serials can&rsquo;t rub off, so an asset&rsquo;s identity lasts as long as the asset does.</p>
             </div></div>
           </div>
           <div class="qa">
             <button class="qa-q" aria-expanded="false">
-              <span class="qa-q-text">Typical Applications</span>
+              <span class="qa-q-text">Inventory control</span>
               <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="qa-a"><div class="qa-a-in">
-              <div class="chips"><span class="chip">Asset tracking</span><span class="chip">Inventory control</span><span class="chip">Calibration tags</span></div>
+              <p>Durable tags for bins, racks, shelving, and tooling that keep counts and locations accurate on a busy floor. Available blank for field-stamping or pre-serialized in the sequence and format you specify.</p>
+            </div></div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false">
+              <span class="qa-q-text">Calibration tags</span>
+              <svg class="qa-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="qa-a"><div class="qa-a-in">
+              <p>Tags built to record instrument IDs and calibration cycles in environments where paper stickers fail. Permanent marking keeps audit trails intact for ISO and quality-system compliance.</p>
             </div></div>
           </div>
         </div>
@@ -208,7 +215,7 @@
         <h3>At a Glance</h3>
           <div class="specrow"><span class="k">Materials</span><span class="v">Aluminum, stainless &amp; more</span></div>
           <div class="specrow"><span class="k">Marking</span><span class="v">Sequential #, barcode, QR</span></div>
-          <div class="specrow"><span class="k">Made by</span><span class="v">Punch, laser, etch</span></div>
+          <div class="specrow"><span class="k">Made by</span><span class="v">Etch, screen, digital &amp; laser</span></div>
           <div class="specrow"><span class="k">Attach</span><span class="v">Holes, slots, adhesive</span></div>
           <div class="specrow"><span class="k">Volume</span><span class="v">Any volume</span></div>
         <a class="btn btn-red" href="tnc-contact.html">Request a Quote</a>
