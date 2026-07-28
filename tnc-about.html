@@ -115,14 +115,12 @@
   .ph-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.12em;color:#B07A1E;background:#FBEFD6;padding:3px 9px;border-radius:20px;margin-top:8px;text-transform:uppercase}
 
   /* leadership */
-  .team{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .member{text-align:center}
-  .avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,#1a335c,#0c1c38);display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 14px 30px rgba(13,31,60,.18);position:relative}
-  .avatar svg{width:54px;height:54px;opacity:.55}
-  .avatar .cam{position:absolute;bottom:-6px;font-size:9px;letter-spacing:.1em;color:var(--muted);background:#fff;border:1px solid var(--line);padding:2px 8px;border-radius:20px;text-transform:uppercase}
-  .member .nm{font-weight:800;color:var(--navy);font-size:16px}
-  .member .ti{color:var(--red);font-size:13px;font-weight:700;letter-spacing:.04em;margin:2px 0 8px}
-  .member .bio{color:var(--muted);font-size:13.5px}
+  .lead-photo{aspect-ratio:16/7;max-width:960px;margin:0 auto;border-radius:8px;background:linear-gradient(135deg,#16305a,#0a182f);position:relative;overflow:hidden;box-shadow:0 24px 50px rgba(13,31,60,.18)}
+  .lead-photo::after{content:"Dale, Dan & Ryan — combined photo in front of the Lancaster facility";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:13.5px;letter-spacing:.05em;text-align:center;padding:0 24px}
+  .lead-photo .scribe{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 26px)}
+  .lead-photo .ph-pill{position:absolute;top:16px;left:16px;font-size:10px;font-weight:800;letter-spacing:.12em;color:#B07A1E;background:#FBEFD6;padding:3px 9px;border-radius:20px;text-transform:uppercase;z-index:1}
+  .lead-caption{display:flex;justify-content:center;gap:12px 36px;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:14.5px}
+  .lead-caption strong{color:var(--navy);font-weight:800}
 
   /* awards + certs */
   .awards-copy{max-width:760px}
@@ -174,7 +172,7 @@
   /* responsive */
   @media(max-width:960px){
     .intro-grid,.stats .wrap{grid-template-columns:1fr;gap:30px}
-    .team,.values,.cert-strip{grid-template-columns:repeat(2,1fr)}
+    .values,.cert-strip{grid-template-columns:repeat(2,1fr)}
     .stat{border-left:0}
   }
   @media(max-width:760px){
@@ -188,7 +186,7 @@
     .tl-item:nth-child(odd) .tl-dot,.tl-item:nth-child(even) .tl-dot{left:11px;right:auto}
   }
   @media(max-width:520px){
-    .team,.values,.cert-strip{grid-template-columns:1fr}
+    .values,.cert-strip{grid-template-columns:1fr}
     .hero .wrap{padding:64px 32px 72px}
   }
 </style>
@@ -288,10 +286,14 @@
       <h2>Run by the Family That Built It</h2>
       <p>Three generations of owners who are on the floor and on the phone.</p>
     </div>
-    <div class="team" style="grid-template-columns:repeat(3,1fr);max-width:860px;margin:0 auto">
-      <div class="member reveal"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span class="cam">Photo to come</span></div><div class="nm">Dale Crownover</div><div class="ti">CEO</div></div>
-      <div class="member reveal"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span class="cam">Photo to come</span></div><div class="nm">Dan Crownover</div><div class="ti">President</div></div>
-      <div class="member reveal"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span class="cam">Photo to come</span></div><div class="nm">Ryan Crownover</div><div class="ti">Vice President</div></div>
+    <div class="lead-photo reveal">
+      <div class="scribe"></div>
+      <span class="ph-pill">Photo to come</span>
+    </div>
+    <div class="lead-caption reveal">
+      <span><strong>Dale Crownover</strong> &middot; CEO</span>
+      <span><strong>Dan Crownover</strong> &middot; President</span>
+      <span><strong>Ryan Crownover</strong> &middot; Vice President</span>
     </div>
     <div class="center" style="margin-top:46px"><a class="btn btn-outline-red" href="tnc-staff.html">View All Staff</a></div>
   </div>
